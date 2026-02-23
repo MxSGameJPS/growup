@@ -229,7 +229,7 @@ const Services = () => {
 
       <style jsx>{`
         .services-section {
-          padding: 8rem 0;
+          padding: 2rem 0;
           background: #0a0a0a;
           overflow: hidden;
         }
@@ -357,6 +357,14 @@ const Services = () => {
           }
           h2 {
             font-size: 2.2rem;
+          }
+
+          .badge {
+            font-size: 1.8rem;
+          }
+
+          .btn-cta {
+            font-size: 1rem;
           }
         }
       `}</style>

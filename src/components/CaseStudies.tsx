@@ -316,7 +316,7 @@ const CaseStudies = () => {
 
       <style jsx>{`
         .cases-section {
-          padding: 8rem 0;
+          padding: 1rem 0;
           background: #0a0a0a;
           overflow: hidden;
         }
@@ -447,6 +447,10 @@ const CaseStudies = () => {
           }
           h2 {
             font-size: 2rem;
+          }
+          .btn-cta {
+            font-size: 1rem;
+            margin-top: 5rem;
           }
         }
       `}</style>

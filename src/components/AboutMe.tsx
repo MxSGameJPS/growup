@@ -27,7 +27,7 @@ const AboutMe = () => {
     <section id="sobre" className="about-section">
       <div className="container about-grid">
         <div className="about-content animate-fade-in">
-          <div className="badge">Quem lidera a GrowUp</div>
+          <div className="badge">Quem lidera a Grow Up</div>
           <h2>
             Engenharia com propósito.{" "}
             <span className="highlight">Experiência em escala.</span>
@@ -35,9 +35,10 @@ const AboutMe = () => {
 
           <div className="about-text">
             <p>
-              Por trás da GrowUp Solutions está <strong>David Rodrigues</strong>
-              , Arquiteto de Software com mais de uma década de atuação em
-              ambientes de alta criticidade e complexidade técnica.
+              Por trás da <strong>Grow Up</strong> está{" "}
+              <strong>David Rodrigues</strong>, Arquiteto de Software com mais
+              de uma década de atuação em ambientes de alta criticidade e
+              complexidade técnica.
             </p>
             <p>
               Minha trajetória foi forjada nos bastidores de gigantes do
@@ -66,8 +67,9 @@ const AboutMe = () => {
 
           <p className="final-vision">
             Acredito na arquitetura limpa, na transparência radical e no uso da
-            tecnologia como alavanca de lucro. Na GrowUp, cada projeto é tratado
-            com a precisão de um arquiteto e a visão de um parceiro de negócios.
+            tecnologia como alavanca de lucro. Na Grow Up, cada projeto é
+            tratado com a precisão de um arquiteto e a visão de um parceiro de
+            negócios.
           </p>
         </div>
       </div>
@@ -187,6 +189,10 @@ const AboutMe = () => {
           }
           h2 {
             font-size: 2.2rem;
+          }
+
+          .badge {
+            font-size: 1.8rem;
           }
         }
       `}</style>
