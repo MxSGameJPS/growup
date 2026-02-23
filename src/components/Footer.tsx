@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
           <div className="link-group">
             <h4>Contato</h4>
-            <p>contato@growuptech.com.br</p>
+            <p>david@growupsolutions.com.br</p>
             <a
               href="https://wa.me/5515936182621"
               target="_blank"
