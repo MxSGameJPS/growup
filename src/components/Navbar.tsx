@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const whatsappUrl = "https://wa.me/5511999999999";
+  const whatsappUrl = "https://wa.me/5515936182621";
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);

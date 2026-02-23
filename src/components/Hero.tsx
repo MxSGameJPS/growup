@@ -4,7 +4,7 @@ import React from "react";
 import { Rocket, Shield, Activity } from "lucide-react";
 
 const Hero = () => {
-  const whatsappUrl = "https://wa.me/5511999999999";
+  const whatsappUrl = "https://wa.me/5515936182621";
 
   return (
     <section className="hero">

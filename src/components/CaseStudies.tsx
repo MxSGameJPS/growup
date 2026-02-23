@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 import {
   Target,
   Lightbulb,
@@ -13,6 +14,7 @@ import { motion, AnimatePresence } from "framer-motion";
 interface CaseProps {
   title: string;
   company: string;
+  logo: string;
   challenge: string;
   solution: string;
   impact: string;
@@ -21,6 +23,7 @@ interface CaseProps {
 const CaseCard = ({
   title,
   company,
+  logo,
   challenge,
   solution,
   impact,
@@ -28,7 +31,19 @@ const CaseCard = ({
   return (
     <div className="case-card glass hover-glow">
       <div className="case-header">
-        <span className="company">{company}</span>
+        <div className="company-info">
+          <div className="logo-wrapper">
+            <Image
+              src={logo}
+              alt={`${company} Logo`}
+              width={220}
+              height={150}
+              className="company-logo"
+              style={{ objectFit: "contain" }}
+            />
+          </div>
+          {/* <span className="company-name">{company}</span> */}
+        </div>
         <h3>{title}</h3>
       </div>
 
@@ -67,21 +82,37 @@ const CaseCard = ({
           border: 1px solid rgba(255, 255, 255, 0.05);
           display: flex;
           flex-direction: column;
-          gap: 2.5rem;
+          gap: 2rem;
           width: 100%;
           box-sizing: border-box;
         }
-        .company {
+        .company-info {
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
+          margin-bottom: 1rem;
+          justify-content: center;
+        }
+        .logo-wrapper {
+          // background: #ffffff23;
+          padding: 0.5rem 1rem;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 100px;
+          height: 50px;
+          // box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.5);
+        }
+        .company-name {
           color: var(--primary);
           font-weight: 700;
           text-transform: uppercase;
-          letter-spacing: 3px;
+          letter-spacing: 2px;
           font-size: 0.85rem;
-          display: block;
-          margin-bottom: 0.75rem;
         }
         h3 {
-          font-size: 2.2rem;
+          font-size: 2rem;
           font-weight: 700;
           line-height: 1.2;
           color: white;
@@ -126,6 +157,9 @@ const CaseCard = ({
           font-size: 1.1rem;
         }
         @media (max-width: 768px) {
+          .case-card {
+            padding: 2rem;
+          }
           .case-body {
             grid-template-columns: 1fr;
           }
@@ -133,7 +167,12 @@ const CaseCard = ({
             grid-column: span 1;
           }
           h3 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
+          }
+          .company-info {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
           }
         }
       `}</style>
@@ -148,6 +187,7 @@ const CaseStudies = () => {
   const cases = [
     {
       company: "Braspress",
+      logo: "/Empresas/braspress.png",
       title: "Modernização de Core Business",
       challenge:
         "Sistema legado em Delphi que limitava a agilidade operacional e a escalabilidade.",
@@ -158,6 +198,7 @@ const CaseStudies = () => {
     },
     {
       company: "Bradesco",
+      logo: "/Empresas/bradesco.png",
       title: "Eficiência Operacional em Larga Escala",
       challenge:
         "Processos manuais onerosos e propensos a falhas em um ambiente bancário crítico.",
@@ -168,6 +209,7 @@ const CaseStudies = () => {
     },
     {
       company: "Fintech",
+      logo: "/Empresas/fintech.png",
       title: "Arquitetura Financeira de Alta Disponibilidade",
       challenge:
         "Necessidade de um sistema resiliente para balanceamento de fluxos bancários de entrada e saída.",
@@ -178,6 +220,7 @@ const CaseStudies = () => {
     },
     {
       company: "Ambev Tech",
+      logo: "/Empresas/ambevTech.png",
       title: "Otimização de Custos e Performance",
       challenge:
         "Gargalos em fluxos operacionais que geravam desperdício de tempo e recursos.",
@@ -188,6 +231,7 @@ const CaseStudies = () => {
     },
     {
       company: "BTG Pactual",
+      logo: "/Empresas/btgPactual.png",
       title: "Sustentação de Sistemas Críticos",
       challenge:
         "Garantir a continuidade e a estabilidade de softwares em um dos ambientes financeiros mais exigentes do país.",
@@ -290,7 +334,7 @@ const CaseStudies = () => {
 
           <div className="cta-container">
             <a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5515936182621"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-cta"
@@ -328,17 +372,6 @@ const CaseStudies = () => {
           text-align: center;
           margin-bottom: 4rem;
         }
-        .badge {
-          background: rgba(255, 69, 0, 0.1);
-          color: var(--primary);
-          padding: 0.5rem 1.2rem;
-          border-radius: 100px;
-          font-size: 2.9rem;
-          font-weight: 600;
-          display: inline-block;
-          margin-bottom: 1.5rem;
-          border: 1px solid rgba(255, 69, 0, 0.2);
-        }
         h2 {
           font-size: clamp(2.5rem, 5vw, 3.5rem);
           margin-bottom: 1.5rem;
@@ -368,7 +401,6 @@ const CaseStudies = () => {
           margin: 0 60px;
           overflow: visible;
         }
-        /* Crucial fix for framer-motion popLayout */
         :global(.carousel-slide) {
           width: 100% !important;
           max-width: 800px;
@@ -410,12 +442,12 @@ const CaseStudies = () => {
           font-weight: 700;
           font-size: 1.1rem;
           transition: var(--transition);
-          box-shadow: 0 10px 30px var(--primary-glow);
+          box-shadow: 0 10px 30px rgba(255, 69, 0, 0.2);
         }
         .btn-cta:hover {
           transform: translateY(-5px);
           background: var(--accent);
-          box-shadow: 0 15px 40px var(--primary-glow);
+          box-shadow: 0 15px 40px rgba(255, 69, 0, 0.3);
         }
         .carousel-dots {
           display: flex;

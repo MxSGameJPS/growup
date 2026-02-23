@@ -18,7 +18,7 @@ const FloatingButtons = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const whatsappUrl = "https://wa.me/5511999999999"; // Placeholder number
+  const whatsappUrl = "https://wa.me/5515936182621"; // Placeholder number
 
   return (
     <div className="floating-container">

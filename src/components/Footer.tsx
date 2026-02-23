@@ -33,7 +33,14 @@ const Footer = () => {
           <div className="link-group">
             <h4>Contato</h4>
             <p>contato@growuptech.com.br</p>
-            <p>São Paulo, SP</p>
+            <a
+              href="https://wa.me/5515936182621"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-cta"
+            >
+              WhatsApp
+            </a>
           </div>
         </div>
       </div>
