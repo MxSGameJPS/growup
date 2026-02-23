@@ -253,7 +253,7 @@ const CaseStudies = () => {
   }, [cases.length]);
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 6000);
+    const timer = setInterval(nextSlide, 15000);
     return () => clearInterval(timer);
   }, [nextSlide]);
 

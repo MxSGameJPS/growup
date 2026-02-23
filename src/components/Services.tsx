@@ -122,7 +122,7 @@ const Services = () => {
   }, [servicesData.length]);
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 7000);
+    const timer = setInterval(nextSlide, 15000);
     return () => clearInterval(timer);
   }, [nextSlide]);
 
