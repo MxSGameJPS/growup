@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
+import { Outfit } from "next/font/google";
 import "./globals.css";
+import StyledJsxRegistry from "@/lib/registry";
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Grow Up | Consultoria de TI & Modernização Digital",
@@ -15,9 +23,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={outfit.className}>
       <body>
-        <main>{children}</main>
+        <StyledJsxRegistry>
+          <main>{children}</main>
+        </StyledJsxRegistry>
       </body>
     </html>
   );

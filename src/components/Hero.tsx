@@ -8,7 +8,7 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      <div className="container hero-content animate-fade-in">
+      <div className="container hero-content">
         <h1>
           Resultados que <span className="text-gradient">Escalam</span> sua
           Operação.

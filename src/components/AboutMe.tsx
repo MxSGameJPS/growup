@@ -26,7 +26,7 @@ const AboutMe = () => {
   return (
     <section id="sobre" className="about-section">
       <div className="container about-grid">
-        <div className="about-content animate-fade-in">
+        <div className="about-content">
           <div className="badge">Quem lidera a Grow Up</div>
           <h2>
             Engenharia com propósito.{" "}
